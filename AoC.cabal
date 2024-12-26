@@ -1,0 +1,52 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           AoC
+version:        1.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Solutions
+      Utils
+  other-modules:
+      Paths_AoC
+  hs-source-dirs:
+      src
+  default-extensions:
+      LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-orphans -Wno-missing-export-lists
+  build-depends:
+      MemoTrie
+    , base >=4.7 && <5
+    , composition
+    , containers
+    , directory
+    , matrix
+    , regex-tdfa
+    , split
+  default-language: GHC2021
+
+executable AoC
+  main-is: Main.hs
+  other-modules:
+      Paths_AoC
+  hs-source-dirs:
+      app
+  default-extensions:
+      LambdaCase
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-orphans -Wno-missing-export-lists -rtsopts -with-rtsopts=-N
+  build-depends:
+      AoC
+    , MemoTrie
+    , base >=4.7 && <5
+    , composition
+    , containers
+    , directory
+    , matrix
+    , regex-tdfa
+    , split
+  default-language: GHC2021
